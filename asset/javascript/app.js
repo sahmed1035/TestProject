@@ -1,4 +1,16 @@
 
+//Typing effect
+document.addEventListener('DOMContentLoaded', function(){
+    Typed.new('.element', {
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 50,
+        backSpeed: 50
+    });
+});
+
+
+
+
 //Script for the form validation. 
 
 //  JavaScript for disabling form submissions if there are invalid fields
@@ -19,3 +31,6 @@
         });
     }, false);
 })();
+
+
+
