@@ -1,12 +1,22 @@
 .container {
-    margin: 8%;
-    color: white;
-    background-color:rgb(65,58,121);
+    margin-top: 5%;
+    color:white;
+    /* background-color:rgb(65,58,121); */
+    background-color:rgb(65,58,121) transparent;
 }
 
-.border {
-    height:400px;
+body {
+    /* background-image: url("../images/kite_bg.png"); */
+   background-repeat:no-repeat;
+   background-size: 100%;
+    /* background-image: url("../images/school_bg.png"); */
+    background-image: url("../images/famil2_bg.png");
+    
 }
+
+/* .border {
+    height:400px;
+} */
 
 .btn {
     font-size:20px;
@@ -26,7 +36,7 @@
     line-height: 1.2;}
 
 
-thead {color:white;}
+thead {color:green;}
 
 .table-active {background-color: rgb(175, 152, 196)}
 
