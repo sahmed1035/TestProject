@@ -120,7 +120,7 @@ $(document).ready(function () {
             store_data_year = responseCrime.results[responseCrime.results.length - 1].data_year;
             console.log(store_data_year);
 
-            //Syeda, you don't need to return a false value
+            //we don't need to return a false value as we are submitting it. 
             // return false;
 
 
@@ -153,8 +153,6 @@ $(document).ready(function () {
     //=====================================================================================
 
 
-    //Syeda, the curly backet was misplaced for the search onclick.
-    //I had to collapse to find it out.
 
     //on click event associated with search button
     var hasStates;
@@ -165,14 +163,14 @@ $(document).ready(function () {
         event.preventDefault();
         // alert("talking!");
 
-        // Syeda, clears the table for each selected state
+        //clears the table for each selected state
         $("tbody").empty();
 
         //This gets value of the selected state dropdown.
         hasStates = $("#myselect option:selected").val();
         console.log(hasStates);
 
-        //Syeda, all the queryURLs should be before you call the runQuery function 
+        //all the queryURLs should be before you call the runQuery function 
         //otherwise there is no API pass in that function
         queryURL_base_violent = "https://cors.io/?https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/violent-crime/offense/states/" + hasStates + "/count?api_key=" + apiKey;
         queryURL_base_homicide = "https://cors.io/?https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/homicide/offense/states/" + hasStates + "/count?api_key=" + apiKey;
@@ -203,7 +201,7 @@ $(document).ready(function () {
 
 
 
-    //Syeda,you need to call the child_added below from another page.
+    // need to call the child_added below from another page.
     // That means you need to create a separate view only for entries added. 
     // You cannot use the same view as the search view.
 
