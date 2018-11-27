@@ -52,3 +52,11 @@ thead {color:white; font-size:18px; font-weight: bold;}
 
 
 
+#dBtn { 
+    display: flex; 
+    justify-content:flex-end;
+    align-items: flex-end;
+    /* justify-content: baseline;
+    align-items: center; */
+
+}
