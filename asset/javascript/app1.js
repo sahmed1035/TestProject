@@ -128,6 +128,7 @@ $(document).ready(function () {
             $("#tbodyCrime").append(tRow_crime);
             $("#tbodyCrime").css({"background-color": "yellow", "font-size": "110%"});
             //}
+            //pushing the data to the database 
             var newCrime = {
                 d_state_abbr: store_state_abbr,
                 d_offense_name: store_offense_name,

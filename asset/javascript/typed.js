@@ -132,7 +132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      if (this.pause.typewrite) {
 	        this.typewrite(this.pause.curString, this.pause.curStrPos);
 	      } else {
-	        this.backspace(this.pause.curString, this.pause.curStrPos);
+	       // this.backspace(this.pause.curString, this.pause.curStrPos);
 	      }
 	      this.options.onStart(this.arrayPos, this);
 	    }
@@ -159,9 +159,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var restart = arguments.length <= 0 || arguments[0] === undefined ? true : arguments[0];
 	
 	      clearInterval(this.timeout);
-	      this.replaceText('');
+	    //  this.replaceText('');
 	      if (this.cursor && this.cursor.parentNode) {
-	        this.cursor.parentNode.removeChild(this.cursor);
+	       // this.cursor.parentNode.removeChild(this.cursor);
 	        this.cursor = null;
 	      }
 	      this.strPos = 0;
@@ -193,7 +193,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          _this.typewrite(_this.strings[_this.sequence[_this.arrayPos]], _this.strPos);
 	        } else {
 	          // Start typing
-	          _this.backspace(_this.currentElContent, _this.currentElContent.length);
+	         // _this.backspace(_this.currentElContent, _this.currentElContent.length);
 	        }
 	      }, this.startDelay);
 	    }
@@ -330,7 +330,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	      }
 	      this.timeout = setTimeout(function () {
-	        _this3.backspace(curString, curStrPos);
+	    //    _this3.backspace(curString, curStrPos);
 	      }, this.backDelay);
 	    }
 	
@@ -341,60 +341,60 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @private
 	     */
 	  }, {
-	    key: 'backspace',
-	    value: function backspace(curString, curStrPos) {
-	      var _this4 = this;
+	    // key: 'backspace',
+	    // value: function backspace(curString, curStrPos) {
+	    //   var _this4 = this;
 	
-	      if (this.pause.status === true) {
-	        this.setPauseStatus(curString, curStrPos, true);
-	        return;
-	      }
-	      if (this.fadeOut) return this.initFadeOut();
+	    //   if (this.pause.status === true) {
+	    //     this.setPauseStatus(curString, curStrPos, true);
+	    //     return;
+	    //   }
+	    //   if (this.fadeOut) return this.initFadeOut();
 	
-	      this.toggleBlinking(false);
-	      var humanize = this.humanizer(this.backSpeed);
+	    //   this.toggleBlinking(false);
+	    //   var humanize = this.humanizer(this.backSpeed);
 	
-	      this.timeout = setTimeout(function () {
-	        curStrPos = _htmlParserJs.htmlParser.backSpaceHtmlChars(curString, curStrPos, _this4);
-	        // replace text with base text + typed characters
-	        var curStringAtPosition = curString.substr(0, curStrPos);
-	        _this4.replaceText(curStringAtPosition);
+	    //   this.timeout = setTimeout(function () {
+	    //     curStrPos = _htmlParserJs.htmlParser.backSpaceHtmlChars(curString, curStrPos, _this4);
+	    //     // replace text with base text + typed characters
+	    //     var curStringAtPosition = curString.substr(0, curStrPos);
+	    //     _this4.replaceText(curStringAtPosition);
 	
-	        // if smartBack is enabled
-	        if (_this4.smartBackspace) {
-	          // the remaining part of the current string is equal of the same part of the new string
-	          var nextString = _this4.strings[_this4.arrayPos + 1];
-	          if (nextString && curStringAtPosition === nextString.substr(0, curStrPos)) {
-	            _this4.stopNum = curStrPos;
-	          } else {
-	            _this4.stopNum = 0;
-	          }
-	        }
+	    //     // if smartBack is enabled
+	    //     if (_this4.smartBackspace) {
+	    //       // the remaining part of the current string is equal of the same part of the new string
+	    //       var nextString = _this4.strings[_this4.arrayPos + 1];
+	    //       if (nextString && curStringAtPosition === nextString.substr(0, curStrPos)) {
+	    //         _this4.stopNum = curStrPos;
+	    //       } else {
+	    //         _this4.stopNum = 0;
+	    //       }
+	    //     }
 	
-	        // if the number (id of character in current string) is
-	        // less than the stop number, keep going
-	        if (curStrPos > _this4.stopNum) {
-	          // subtract characters one by one
-	          curStrPos--;
-	          // loop the function
-	          _this4.backspace(curString, curStrPos);
-	        } else if (curStrPos <= _this4.stopNum) {
-	          // if the stop number has been reached, increase
-	          // array position to next string
-	          _this4.arrayPos++;
-	          // When looping, begin at the beginning after backspace complete
-	          if (_this4.arrayPos === _this4.strings.length) {
-	            _this4.arrayPos = 0;
-	            _this4.options.onLastStringBackspaced();
-	            _this4.shuffleStringsIfNeeded();
-	            _this4.begin();
-	          } else {
-	            _this4.typewrite(_this4.strings[_this4.sequence[_this4.arrayPos]], curStrPos);
-	          }
-	        }
-	        // humanized value for typing
-	      }, humanize);
-	    }
+	    //     // if the number (id of character in current string) is
+	    //     // less than the stop number, keep going
+	    //     if (curStrPos > _this4.stopNum) {
+	    //       // subtract characters one by one
+	    //       curStrPos--;
+	    //       // loop the function
+	    //       _this4.backspace(curString, curStrPos);
+	    //     } else if (curStrPos <= _this4.stopNum) {
+	    //       // if the stop number has been reached, increase
+	    //       // array position to next string
+	    //       _this4.arrayPos++;
+	    //       // When looping, begin at the beginning after backspace complete
+	    //       if (_this4.arrayPos === _this4.strings.length) {
+	    //         _this4.arrayPos = 0;
+	    //         _this4.options.onLastStringBackspaced();
+	    //         _this4.shuffleStringsIfNeeded();
+	    //         _this4.begin();
+	    //       } else {
+	    //         _this4.typewrite(_this4.strings[_this4.sequence[_this4.arrayPos]], curStrPos);
+	    //       }
+	    //     }
+	    //     // humanized value for typing
+	    //   }, humanize);
+	    // }
 	
 	    /**
 	     * Full animation is complete
