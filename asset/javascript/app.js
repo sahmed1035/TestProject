@@ -2,7 +2,7 @@
 //Typing effect
 var typed = new Typed('.element', {
     strings: ["First sentence.", "Second sentence."],
-    typeSpeed: 50
+    typeSpeed: 40
   });
 
   

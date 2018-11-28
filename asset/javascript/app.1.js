@@ -128,7 +128,15 @@ $(document).ready(function () {
             $("#tbodyCrime").append(tRow_crime);
             $("#tbodyCrime").css({"background-color": "yellow", "font-size": "110%"});
             //}
-
+            var newCrime = {
+                d_state_abbr: store_state_abbr,
+                d_offense_name: store_offense_name,
+                d_offense_count: store_offense_count,
+                d_data_year: store_data_year
+            };
+    
+            // Uploads train data to the database
+            database.ref().push(newCrime);
         });
     }
 
@@ -138,15 +146,7 @@ $(document).ready(function () {
 
         event.preventDefault();
         // Creates local "temporary" object for holding crime data
-        var newCrime = {
-            d_state_abbr: store_state_abbr,
-            d_offense_name: store_offense_name,
-            d_offense_count: store_offense_count,
-            d_data_year: store_data_year
-        };
-
-        // Uploads train data to the database
-        database.ref().push(newCrime);
+       
     });
 
     //MAIN PROCESSES
@@ -178,11 +178,11 @@ $(document).ready(function () {
         queryURL_base_aggravated = "https://cors.io/?https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/aggravated-assault/offense/states/" + hasStates + "/count?api_key=" + apiKey;
         queryURL_base_burglary = "https://cors.io/?https://api.usa.gov/crime/fbi/sapi/api/data/nibrs/burglary/offense/states/" + hasStates + "/count?api_key=" + apiKey;
 
-        console.log(queryURL_base_violent);
-        console.log(queryURL_base_homicide);
-        console.log(queryURL_base_rape);
-        console.log(queryURL_base_aggravated);
-        console.log(queryURL_base_burglary);
+        // console.log(queryURL_base_violent);
+        // console.log(queryURL_base_homicide);
+        // console.log(queryURL_base_rape);
+        // console.log(queryURL_base_aggravated);
+        // console.log(queryURL_base_burglary);
         //You only search when there is a state.
         if (hasStates != "") {
             runQuery(hasStates, queryURL_base_violent);
@@ -211,14 +211,14 @@ $(document).ready(function () {
     //     console.log(childSnapshot.val());
 
     //     // Store everything into a variable.
-    //     // state_abbr = childSnapshot.val().d_state_abbr;
-    //     // offense_name = childSnapshot.val().d_offense_name;
-    //     // offense_count = childSnapshot.val().d_offense_count;
-    //     // data_year = childSnapshot.val().d_data_year;
+    // store_state_abbr = childSnapshot.val().d_state_abbr;
+    //     offense_name = childSnapshot.val().d_offense_name;
+    //     offense_count = childSnapshot.val().d_offense_count;
+    //     data_year = childSnapshot.val().d_data_year;
 
     // });
-
-
+    // console.log(store_state_abbr);
+//  $("#store-data").text(store_state_abbr);
 
     //Need to check for empty state, if empty, you shouldn't search
 
