@@ -21,3 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
   }
   
+  //need to put validation for the input boxs
+  

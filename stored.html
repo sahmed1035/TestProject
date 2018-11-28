@@ -6,9 +6,9 @@
     <title>Stored Search</title>
 
 <!-- Bootstrap -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 <!-- jQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -37,30 +37,239 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script> -->
 <!-- <script src="./asset/javascript/app.js"></script> -->
-<script src="./asset/javascript/app1.js"></script>
+ <!--Own CSS Sheet -->
+ <link rel="stylesheet" href="./asset/css/style.css">
 
+
+
+<script src="./asset/javascript/app1.js"></script>
+<script src="./asset/javascript/tab.js"></script>
 
 </head>
 <body>
 
-        <div class="card mb-4">
-                <div class="card-header">Stored Data in the Database</div>
-                <div class="card-body">
-                  <table class="table table-sm table-hover" id='store-data'>
-                    <thead>
-                      <tr>
-                        <th>State</th>
-                        <th scope="col">Offense Name</th>
-                        <th scope="col">Offense count</th>
-                        <th scope="col">Year</th>
-                        <th scope="col">Minutes Away</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+<!-- Tab links -->
+<div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Crime')">Crime Data</button>
+        <button class="tablinks" onclick="openTab(event, 'School')">School Data</button>
+        
+        
+      </div>
+      
+      <!-- Tab content Crime -->
+      <div id="Crime" class="tabcontent">
+            <div id="tbPadding" class="col-md-8 border table-responsive d-flex flex-column flex-md-row justify-content-center">
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    State
+                                </th>
+                                <th>
+                                    Offense name
+                                </th>
+                                <th>
+                                    Offense count
+                                </th>
+                                <th>
+                                    Year
     
+                                </th>
+                            </tr>
+                        </thead>
+    
+                        <tbody id="tbodyCrime">
+    
+                            <!-- <tr class="table-active">
+                                <td>
+                                    AR
+                                </td>
+                                <td>
+                                    burglary
+                                </td>
+                                <td>
+                                    19986
+    
+                                </td>
+                                <td>
+                                    2017
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>
+                                    AR
+                                </td>
+                                <td>
+                                    aggravated-assault
+                                </td>
+                                <td>
+                                    11956
+                                </td>
+                                <td>
+                                    2017
+                                </td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    Glenbrook South
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    9-12
+    
+                                </td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    Niles North
+                                </td>
+                                <td>
+                                    8
+                                </td>
+                                <td>
+                                    9-12
+                                </td>
+                            </tr> -->
+    
+                        </tbody>
+                       
+                    </table>
+        
+                </div>
+      </div>
+      
+
+
+       <!-- Tab content School -->
+      <div id="School" class="tabcontent">
+       
+            <div id="tbPadding" class="col-md-8 border table-responsive d-flex flex-column flex-md-row justify-content-center">
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                </th>
+                                <th>
+                                    School Name
+                                </th>
+                                <th>
+                                   Rating
+                                </th>
+                                <th>
+                                    Grade
+    
+                                </th>
+                            </tr>
+                        </thead>
+    
+                        <tbody id="tbodyCrime">
+    
+                            <!-- <tr class="table-active">
+                                <td>
+                                    AR
+                                </td>
+                                <td>
+                                    burglary
+                                </td>
+                                <td>
+                                    19986
+    
+                                </td>
+                                <td>
+                                    2017
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>
+                                    AR
+                                </td>
+                                <td>
+                                    aggravated-assault
+                                </td>
+                                <td>
+                                    11956
+                                </td>
+                                <td>
+                                    2017
+                                </td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td>
+                                    3
+                                </td>
+                                <td>
+                                    Glenbrook South
+                                </td>
+                                <td>
+                                    10
+                                </td>
+                                <td>
+                                    9-12
+    
+                                </td>
+                            </tr>
+                            <tr class="table-danger">
+                                <td>
+                                    4
+                                </td>
+                                <td>
+                                    Niles North
+                                </td>
+                                <td>
+                                    8
+                                </td>
+                                <td>
+                                    9-12
+                                </td>
+                            </tr> -->
+    
+                        </tbody>
+                       
+                    </table>
+        
+                </div>
+      </div>
+      </div>
+      
+      
+
+  
+
+
+
+      <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="col-md-4">
+              <a class="navbar-brand float-right" id="logo" href="index.html">Syeda Ahmed</a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" col-md-8 collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+              </ul>
+            </div>
+          </nav> -->
+
+
+
 </body>
 </html>
