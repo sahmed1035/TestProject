@@ -1,3 +1,10 @@
+
+
+
+/*====================================================Typed.js===================================================*/
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var typed = new Typed('#typed', {
       stringsElement: '#typed-strings',
@@ -21,5 +28,4 @@ document.addEventListener('DOMContentLoaded', function() {
   
   }
   
-  //need to put validation for the input boxs
   

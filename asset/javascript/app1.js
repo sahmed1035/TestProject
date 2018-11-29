@@ -123,10 +123,10 @@ $(document).ready(function () {
             //we don't need to return a false value as we are submitting it. 
             // return false;
 
-
+            //dynamically formatting the style of the table entries
             tRow_crime.append(state_abbr, offense_name, offense_count, data_year);
             $("#tbodyCrime").append(tRow_crime);
-            $("#tbodyCrime").css({"background-color": "yellow", "font-size": "110%"});
+            $("#tbodyCrime").css({ "color": "white", "font-size": "100%" , "background-color":"rgb(65,58,121) transparent "});
             //}
             //pushing the data to the database 
             var newCrime = {

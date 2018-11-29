@@ -8,7 +8,7 @@
 
 
 
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -21,22 +21,24 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
     <!-- Moment.js Reference -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-   
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script> -->
+
 
     <!-- CSS Reset Sheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-   
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> -->
+
     <!--Own CSS Sheet -->
     <link rel="stylesheet" href="./asset/css/style.css">
 
 
-    
+
     <!-- JavaScript -->
     <script src="asset/javascript/typed.js"></script>
     <!-- <script src="./asset/javascript/typed.js-master/demos.js"></script> -->
     <script src="./asset/javascript/app.js"></script>
     <script src="./asset/javascript/app1.js"></script>
+    <!--script for tabs-->
+    <script src="./asset/javascript/tab.js"></script>
     <!-- <script src="./asset/javascript/typed.min.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
@@ -45,346 +47,255 @@
 </head>
 
 <body>
-    <!-- <div class="border border-dark d-flex flex-column flex-md-row justify-content-center" style="height:150%; width:80%; margin-left:10%;"> -->
-    <div class="container card-header shadow-lg p-3 mb-5 rounded">
-
-        <div class="row">
-            <div class="col-md-12">
-               
+    <!--New layout-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron">
                 <div class="page-header  text-center display-4 type-wrap">
-                   
+
                     <div id="typed-strings">
-                            <h1 > MY YOU-TOPIA</h1>
+                        <h1> MY YOU-TOPIA</h1>
                         <div class="element"></div>
                     </div>
                     <span id="typed" style="white-space:pre;"></span>
                 </div>
-
-                
-
+                <br>
+                <p>
+                    Relocating? Get to know your next neighborhood!
+                </p>
+                <!-- <p>
+                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                </p> -->
             </div>
         </div>
-        <div class="row">
-            <!--Address Form-->
-
+    </div>
+    <div class="container">
+        <!-- <div class="row">
             <div class="col-md-12">
-                <form class="needs-validation" novalidate>
+                <div class="jumbotron">
+                    <div class="page-header  text-center display-4 type-wrap">
+
+                        <div id="typed-strings">
+                            <h1> MY YOU-TOPIA</h1>
+                            <div class="element"></div>
+                        </div>
+                        <span id="typed" style="white-space:pre;"></span>
+                    </div>
+                    <br>
+                    <p>
+                        Relocating? Get to know your next neighborhood!
+                    </p> -->
+                    <!-- <p>
+                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
+                    </p> -->
+                <!-- </div>
+            </div>
+        </div> -->
+        <!---------------------------------------------------------heading ROW ending---------------------------------------------------------->
+
+
+
+        <!--validation form with submit button starting-->
+
+        <div class="row">
+            <div class="col-md-2">
+                <!--empty-->
+            </div>
+            <div class="col-md-8">
+                <!--form browser default-->
+
+                <form>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="validationCustom03">City</label>
-                            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid city.
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-3 mb-3">
-                            <div class="form-group">
-                                    <label for="state" class="col-sm-2 control-label">State</label>
-                                    <div class="col-sm-10">
-                                        <select id="myselect" class="form-control" > <!--id="state" name="state"-->
-                                            <option value="">N/A</option>
-                                            <option value="AK">Alaska</option>
-                                            <option value="AL">Alabama</option>
-                                            <option value="AR">Arkansas</option>
-                                            <option value="AZ">Arizona</option>
-                                            <option value="CA">California</option>
-                                            <option value="CO">Colorado</option>
-                                            <option value="CT">Connecticut</option>
-                                            <option value="DC">District of Columbia</option>
-                                            <option value="DE">Delaware</option>
-                                            <option value="FL">Florida</option>
-                                            <option value="GA">Georgia</option>
-                                            <option value="HI">Hawaii</option>
-                                            <option value="IA">Iowa</option>
-                                            <option value="ID">Idaho</option>
-                                            <option value="IL">Illinois</option>
-                                            <option value="IN">Indiana</option>
-                                            <option value="KS">Kansas</option>
-                                            <option value="KY">Kentucky</option>
-                                            <option value="LA">Louisiana</option>
-                                            <option value="MA">Massachusetts</option>
-                                            <option value="MD">Maryland</option>
-                                            <option value="ME">Maine</option>
-                                            <option value="MI">Michigan</option>
-                                            <option value="MN">Minnesota</option>
-                                            <option value="MO">Missouri</option>
-                                            <option value="MS">Mississippi</option>
-                                            <option value="MT">Montana</option>
-                                            <option value="NC">North Carolina</option>
-                                            <option value="ND">North Dakota</option>
-                                            <option value="NE">Nebraska</option>
-                                            <option value="NH">New Hampshire</option>
-                                            <option value="NJ">New Jersey</option>
-                                            <option value="NM">New Mexico</option>
-                                            <option value="NV">Nevada</option>
-                                            <option value="NY">New York</option>
-                                            <option value="OH">Ohio</option>
-                                            <option value="OK">Oklahoma</option>
-                                            <option value="OR">Oregon</option>
-                                            <option value="PA">Pennsylvania</option>
-                                            <option value="PR">Puerto Rico</option>
-                                            <option value="RI">Rhode Island</option>
-                                            <option value="SC">South Carolina</option>
-                                            <option value="SD">South Dakota</option>
-                                            <option value="TN">Tennessee</option>
-                                            <option value="TX">Texas</option>
-                                            <option value="UT">Utah</option>
-                                            <option value="VA">Virginia</option>
-                                            <option value="VT">Vermont</option>
-                                            <option value="WA">Washington</option>
-                                            <option value="WI">Wisconsin</option>
-                                            <option value="WV">West Virginia</option>
-                                            <option value="WY">Wyoming</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                    </div>
-
-
-                        <!-- <div class="col-md-3 mb-3">
-                            <label for="validationCustom04">State</label>
-                            <input type="text" class="form-control" id="validationCustom04" placeholder="State"
+                            <label for="validationDefault03">City</label>
+                            <input type="text" class="form-control" id="validationDefault03" placeholder="City"
                                 required>
-                            <div class="invalid-feedback">
-                                Please provide a valid state.
-                            </div>
-                        </div> -->
-
-
-                        <div class="col-md-3 mb-3">
-                            <label for="validationCustom05">Zip</label>
-                            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid zip.
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="form-group">
+                                <label for="validationDefault04" for="state" class="col-sm-2 control-label">State</label>
+                                <div class="col-sm-10">
+                                    <select id="myselect" class="form-control" id="validationDefault04" placeholder="State"
+                                        required>
+                                        <!--id="state" name="state"-->
+                                        <option value="">N/A</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DC">District of Columbia</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <option value="HI">Hawaii</option>
+                                        <option value="IA">Iowa</option>
+                                        <option value="ID">Idaho</option>
+                                        <option value="IL">Illinois</option>
+                                        <option value="IN">Indiana</option>
+                                        <option value="KS">Kansas</option>
+                                        <option value="KY">Kentucky</option>
+                                        <option value="LA">Louisiana</option>
+                                        <option value="MA">Massachusetts</option>
+                                        <option value="MD">Maryland</option>
+                                        <option value="ME">Maine</option>
+                                        <option value="MI">Michigan</option>
+                                        <option value="MN">Minnesota</option>
+                                        <option value="MO">Missouri</option>
+                                        <option value="MS">Mississippi</option>
+                                        <option value="MT">Montana</option>
+                                        <option value="NC">North Carolina</option>
+                                        <option value="ND">North Dakota</option>
+                                        <option value="NE">Nebraska</option>
+                                        <option value="NH">New Hampshire</option>
+                                        <option value="NJ">New Jersey</option>
+                                        <option value="NM">New Mexico</option>
+                                        <option value="NV">Nevada</option>
+                                        <option value="NY">New York</option>
+                                        <option value="OH">Ohio</option>
+                                        <option value="OK">Oklahoma</option>
+                                        <option value="OR">Oregon</option>
+                                        <option value="PA">Pennsylvania</option>
+                                        <option value="PR">Puerto Rico</option>
+                                        <option value="RI">Rhode Island</option>
+                                        <option value="SC">South Carolina</option>
+                                        <option value="SD">South Dakota</option>
+                                        <option value="TN">Tennessee</option>
+                                        <option value="TX">Texas</option>
+                                        <option value="UT">Utah</option>
+                                        <option value="VA">Virginia</option>
+                                        <option value="VT">Vermont</option>
+                                        <option value="WA">Washington</option>
+                                        <option value="WI">Wisconsin</option>
+                                        <option value="WV">West Virginia</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+
                     </div>
-                    <div class="form-group d-flex flex-column flex-md-row justify-content-left ">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                            <label class="form-check-label" for="invalidCheck">
-                                Agree to terms and conditions
-                            </label>
-                            <div class="invalid-feedback">
-                                You must agree before submitting.
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn  btn-md p-md-6 " type="submit" id="searchBtn">Submit Search</button>
-                    <!--responsive-->
+
+
+                    <button class="btn  btn-md p-md-6" type="submit" id="searchBtn">Submit Search</button>
                 </form>
+                <!--form ending-->
+
+
+            </div>
+            <div class="col-md-2">
+                <!--empty-->
             </div>
         </div>
+
+        <!---------------------------------------------------------form ROW ending---------------------------------------------------------->
+
+
+
+        <!---------------------------------------------------------map and data tables starting ROW starting---------------------------------------------------------->
+
+
+
         <div class="row">
-                <!-- border border-dark (removed)-->
-            <div class="col-md-4  d-flex flex-column flex-md-row justify-content-center ">
-                <!-- <img alt="Google Map" src="./asset/images/googleMap.jpg" /> -->
+            <div class="col-md-8">
+                <!--Dynamic map will go here-->
 
-                <figure class="figure">
-                    <img src="./asset/images/grey-square.png" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                  </figure>
-
-            </div>
-
-
-
-            <!-- border border-dark (removed)-->
-            <div id="tbPadding" class="col-md-8 border table-responsive d-flex flex-column flex-md-row justify-content-center">
-                <table class="table ">
-                    <thead>
-                        <tr>
-                            <th>
-                                State
-                            </th>
-                            <th>
-                                Offense name
-                            </th>
-                            <th>
-                                Offense count
-                            </th>
-                            <th>
-                                Year
-
-                            </th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="tbodyCrime">
-
-                        <!-- <tr class="table-active">
-                            <td>
-                                AR
-                            </td>
-                            <td>
-                                burglary
-                            </td>
-                            <td>
-                                19986
-
-                            </td>
-                            <td>
-                                2017
-                            </td>
-                        </tr>
-                        <tr class="table-success">
-                            <td>
-                                AR
-                            </td>
-                            <td>
-                                aggravated-assault
-                            </td>
-                            <td>
-                                11956
-                            </td>
-                            <td>
-                                2017
-                            </td>
-                        </tr>
-                        <tr class="table-warning">
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                Glenbrook South
-                            </td>
-                            <td>
-                                10
-                            </td>
-                            <td>
-                                9-12
-
-                            </td>
-                        </tr>
-                        <tr class="table-danger">
-                            <td>
-                                4
-                            </td>
-                            <td>
-                                Niles North
-                            </td>
-                            <td>
-                                8
-                            </td>
-                            <td>
-                                9-12
-                            </td>
-                        </tr> -->
-
-                    </tbody>
-                    <!-- <div class=" text-right" id="dBtn"> // removed the save to database button. saving on submit click. 
-                        <button id="addCrime" class="btn  btn-primary ">Save Crime Data</button>
                 
-                    </div> -->
-                </table>
-    
             </div>
-            <!-- </div> -->
+            <div class="col-md-4">
+                <!--tabs with 2 data tables-->
+
+                <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks " onclick="openTab(event, 'Crime')">Crime Data</button>
+                    <button class="tablinks " onclick="openTab(event, 'School')">School Data</button>
+
+
+                </div>
+
+                <!-- Tab content Crime -->
+                <div id="Crime" class="tabcontent">
+                    <div id="tbPadding" class="col-md-4  d-flex flex-column flex-md-row justify-content-right">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        State
+                                    </th>
+                                    <th>
+                                        Offense name
+                                    </th>
+                                    <th>
+                                        Offense count
+                                    </th>
+                                    <th>
+                                        Year
+
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tbodyCrime">
+
+                                <!--Dynamic table rows for crime data-->
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
 
 
 
-            
+                <!-- Tab content School -->
+                <div id="School" class="tabcontent">
 
+                    <div id="tbPadding" class="col-md-4  d-flex flex-column flex-md-row justify-content-right">
+                        <table class="table ">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        #
+                                    </th>
+                                    <th>
+                                        School Name
+                                    </th>
+                                    <th>
+                                        Rating
+                                    </th>
+                                    <th>
+                                        Grade
 
-            <!-- border border-dark (removed)-->
-            <!-- <div id="tbPadding" class="col-md-4 border table-responsive d-flex flex-column flex-md-row justify-content-center">
-                <table class="table ">
-                    <thead>
-                        <tr>
-                            <th>
-                                #
-                            </th>
-                            <th>
-                                School Name
-                            </th>
-                            <th>
-                                Rating 
-                            </th>
-                            <th>
-                                Grades
+                                    </th>
+                                </tr>
+                            </thead>
 
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody> -->
+                            <tbody id="tbodySchool">
 
-                        <!-- <tr class="table-active">
-                            <td>
-                                1
-                            </td>
-                            <td>
-                                Hynes Elementary
-                            </td>
-                            <td>
-                                9
+                                <!--Dynamic school data-->
 
-                            </td>
-                            <td>
-                                PK-4
-                            </td>
-                        </tr>
-                        <tr class="table-success">
-                            <td>
-                                2
-                            </td>
-                            <td>
-                                Golf Middle
-                            </td>
-                            <td>
-                                9
-                            </td>
-                            <td>
-                                5-8
-                            </td>
-                        </tr>
-                        <tr class="table-warning">
-                            <td>
-                                3
-                            </td>
-                            <td>
-                                Glenbrook South
-                            </td>
-                            <td>
-                                10
-                            </td>
-                            <td>
-                                9-12
+                            </tbody>
 
-                            </td>
-                        </tr>
-                        <tr class="table-danger">
-                            <td>
-                                4
-                            </td>
-                            <td>
-                                Niles North
-                            </td>
-                            <td>
-                                8
-                            </td>
-                            <td>
-                                9-12
-                            </td>
-                        </tr> -->
-                    <!-- </tbody>
-                </table>
-            </div> -->
-            <!-- </div> -->
+                        </table>
 
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-       
+
+
+
+    </div>
+
+
 
 
 
 </body>
 
 </html>
-
-
-
-
-
