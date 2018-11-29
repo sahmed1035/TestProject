@@ -25,7 +25,7 @@
 
 
     <!-- CSS Reset Sheet -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
 
     <!--Own CSS Sheet -->
     <link rel="stylesheet" href="./asset/css/style.css">
@@ -36,7 +36,7 @@
     <script src="asset/javascript/typed.js"></script>
     <!-- <script src="./asset/javascript/typed.js-master/demos.js"></script> -->
     <script src="./asset/javascript/app.js"></script>
-    <script src="./asset/javascript/app1.js"></script>
+    <script src="./asset/javascript/typedlib.js"></script>
     <!--script for tabs-->
     <script src="./asset/javascript/tab.js"></script>
     <!-- <script src="./asset/javascript/typed.min.js"></script> -->
@@ -50,9 +50,10 @@
     <!--New layout-->
     <div class="row">
         <div class="col-md-12">
-            <div class="jumbotron">
-                <div class="page-header  text-center display-4 type-wrap">
-
+            <div class="jumbotron d-flex flex-column  flex-md-row">
+                   
+                <div class="  text-center display-4 type-wrap">
+                        
                     <div id="typed-strings">
                         <h1> MY YOU-TOPIA</h1>
                         <div class="element"></div>
@@ -60,16 +61,16 @@
                     <span id="typed" style="white-space:pre;"></span>
                 </div>
                 <br>
+                
                 <p>
-                    Relocating? Get to know your next neighborhood!
+                 
+                 Relocating? Get to know your next neighborhood!
+                 
                 </p>
-                <!-- <p>
-                    <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                </p> -->
             </div>
         </div>
     </div>
-    <div class="container">
+    <!-- <div class="container"> -->
         <!-- <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
@@ -109,7 +110,7 @@
                         <div class="col-md-6 mb-3">
                             <label for="validationDefault03">City</label>
                             <input type="text" class="form-control" id="validationDefault03" placeholder="City"
-                                required>
+                            required="required">
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
@@ -179,7 +180,9 @@
                     </div>
 
 
-                    <button class="btn  btn-md p-md-6" type="submit" id="searchBtn">Submit Search</button>
+                    <button class="btn   btn-md p-md-6" type="submit" id="searchBtn">Submit Search</button>
+                    <div id="errormessage"></div>
+
                 </form>
                 <!--form ending-->
 
@@ -196,13 +199,11 @@
 
         <!---------------------------------------------------------map and data tables starting ROW starting---------------------------------------------------------->
 
-
-
-        <div class="row">
+<!--container starting-->
+        <div class="container">
+        <div class="row  d-flex ">
             <div class="col-md-8">
                 <!--Dynamic map will go here-->
-
-                
             </div>
             <div class="col-md-4">
                 <!--tabs with 2 data tables-->
