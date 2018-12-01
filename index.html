@@ -20,9 +20,6 @@
     <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 
-    <!-- Moment.js Reference -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script> -->
-
 
     <!-- CSS Reset Sheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
@@ -70,35 +67,14 @@
             </div>
         </div>
     </div>
-    <!-- <div class="container"> -->
-        <!-- <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <div class="page-header  text-center display-4 type-wrap">
-
-                        <div id="typed-strings">
-                            <h1> MY YOU-TOPIA</h1>
-                            <div class="element"></div>
-                        </div>
-                        <span id="typed" style="white-space:pre;"></span>
-                    </div>
-                    <br>
-                    <p>
-                        Relocating? Get to know your next neighborhood!
-                    </p> -->
-                    <!-- <p>
-                        <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                    </p> -->
-                <!-- </div>
-            </div>
-        </div> -->
+   
         <!---------------------------------------------------------heading ROW ending---------------------------------------------------------->
 
 
 
         <!--validation form with submit button starting-->
 
-        <div class="row">
+        <div class="row" >
             <div class="col-md-2">
                 <!--empty-->
             </div>
@@ -108,18 +84,16 @@
                 <form>
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
-                            <label for="validationDefault03">City</label>
-                            <input type="text" class="form-control" id="validationDefault03" placeholder="City"
-                            required="required">
+                            <label for="validationDefault03"></label>
+                            <input type="text" class="form-control" id="validationDefault03" placeholder="City" required="required">
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="form-group">
-                                <label for="validationDefault04" for="state" class="col-sm-2 control-label">State</label>
+                                <label for="validationDefault04" for="state" class="col-sm-2 control-label"></label>
                                 <div class="col-sm-10">
-                                    <select id="myselect" class="form-control" id="validationDefault04" placeholder="State"
-                                        required>
-                                        <!--id="state" name="state"-->
-                                        <option value="">N/A</option>
+                                    <select id="myselect" class="form-control" id="validationDefault04" placeholder="State" required>
+                                        
+                                        <option value="">State</option>
                                         <option value="AK">Alaska</option>
                                         <option value="AL">Alabama</option>
                                         <option value="AR">Arkansas</option>
@@ -180,9 +154,6 @@
                     </div>
 
 
-                    <!-- <button class="btn   btn-md p-md-6" type="submit" id="searchBtn">Submit Search</button>
-                    <div id="errormessage"></div> -->
-
                 </form>
                 <!--form ending-->
 
@@ -195,40 +166,56 @@
 <!--School filters-->
 
 
+<div class="col-md-2">
+        <!--empty-->
+      </div>
+    </div>
+    <!--School filters-->
+  
+  
+    <div class="row">
+      <div class="col-md-2">
+        <!--empty-->
+      </div>
 
-<div class="row">
-        <div class="col-md-2">
-            <!--empty-->
-        </div>
-        <div class="col-md-8">
-            <!--form browser default-->
-
-            <div>
-                    <select id="school-type">
-                            <option value="public">Public</option>
-                            <option value="charter">Charter</option>
-                            <option value="private">Private</option>
-                        </select>
-                        <select id="school-level">
-                            <option value="elementary-schools">Elementary Schools</option>
-                            <option value="middle-schools">Middle Schools</option>
-                            <option value="high-schools">High Schools</option>
-                        </select>
-
+      <div class="col-md-8">
+        <!--form browser default-->
+  
+        <!-- <form> -->
+        <div class="form-row">
+          <div class="col-md-2 mb-1">
+            <label for="validationDefault03"></label>
+            <select id="school-type"  class="form-control">
+              <option value="public">Public</option>
+              <option value="charter">Charter</option>
+              <option value="private">Private</option>
+            </select>
+  
+          </div>
+          <div class="col-md-4 mb-1">
+            <div class="form-group">
+              <!-- <label for="validationDefault04" for="state" class="col-sm-2 control-label">State</label> -->
+              <div class="col-sm-10">
+                <select id="school-level" class="form-control" >
+                  <!--id="state" name="state"-->
+                  <option value="elementary-schools">Elementary Schools</option>
+                  <option value="middle-schools">Middle Schools</option>
+                  <option value="high-schools">High Schools</option>
+                </select>
+              </div>
             </div>
-
-                <button class="btn   btn-md p-md-6" type="submit" id="searchBtn">Submit Search</button>
-                <div id="errormessage"></div>
-
-            </form>
-            <!--form ending-->
-
-
+          </div>
+  
+          <div>
+            <button class="btn   btn-md p-md-6" type="submit" id="searchBtn" onclick="showCustomer()">Submit Search</button>
+            <div id="errormessage"></div>
+          </div>
+  
+  
         </div>
-        <div class="col-md-2">
-            <!--empty-->
         </div>
     </div>
+
 
 
 
@@ -242,7 +229,7 @@
 <!--container starting-->
         <div class="container">
         <div class="row  d-flex ">
-            <div class="col-md-8">
+            <div class="col-md-8"  id="map">
                 <!--Dynamic map will go here-->
             </div>
             <div class="col-md-4">
@@ -250,8 +237,8 @@
 
                 <!-- Tab links -->
                 <div class="tab">
-                    <button class="tablinks " onclick="openTab(event, 'Crime')">Crime Data</button>
-                    <button class="tablinks " onclick="openTab(event, 'School')">School Data</button>
+                    <button class="tablinks " onclick="runQuery(event, 'Crime')">Neighborhood Safety</button>
+                    <button class="tablinks " onclick="runQuery(event, 'School')">Area Schools</button>
 
 
                 </div>
@@ -262,9 +249,9 @@
                         <table class="table ">
                             <thead>
                                 <tr>
-                                    <th>
+                                    <!-- <th>
                                         State
-                                    </th>
+                                    </th> -->
                                     <th>
                                         Offense name
                                     </th>
@@ -299,18 +286,15 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        #
+                                        School Name
                                     </th>
                                     <th>
-                                        School Name
+                                        Grade Range
                                     </th>
                                     <th>
                                         Rating
                                     </th>
-                                    <th>
-                                        Grade
-
-                                    </th>
+                            
                                 </tr>
                             </thead>
 
@@ -335,7 +319,11 @@
 
 
 
+    <script src="./asset/javascript/app_map_and_school.js"></script>
 
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1WbeTsCNU14Azno4x_bpg_9jHirmBTqQ&callback=initMap">
+ 
+    </script>
 
 </body>
 

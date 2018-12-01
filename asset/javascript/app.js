@@ -97,7 +97,7 @@ $(document).ready(function () {
           var tRow_crime = $("<tr>");
 
 
-          state_abbr = $("<td>").text(responseCrime.results[responseCrime.results.length - 1].state_abbr);
+        //   state_abbr = $("<td>").text(responseCrime.results[responseCrime.results.length - 1].state_abbr);
           store_state_abbr = responseCrime.results[responseCrime.results.length - 1].state_abbr;
 
 
@@ -142,13 +142,7 @@ $(document).ready(function () {
   }
 
 
-  // need this add button to let the user saves the results
-  // $("#addCrime").on('click', function (event) {
-
-  //     event.preventDefault();
-      // Creates local "temporary" object for holding crime data
-     
-  // });
+  
 
   //MAIN PROCESSES
   //=====================================================================================
