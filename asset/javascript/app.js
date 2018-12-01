@@ -190,6 +190,7 @@ $(document).ready(function () {
           runQuery(hasStates, queryURL_base_aggravated);
           runQuery(hasStates, queryURL_base_burglary);
           $("#errormessage").text("");
+          $('#buttoncrime').click();
 
       }// if the state is emptied, displayed error message div
       else if(hasStates === "") {
