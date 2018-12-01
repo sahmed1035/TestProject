@@ -132,3 +132,4 @@ thead {color:rgb(201, 80, 10); font-size:18px; font-weight: bold;}
 #errormessage{background-color: yellow; width: 80%; color: red; font-size: 18px; margin-top: 0.1%;}
 
 
+#map{ height: 400px; width: 60%;}
